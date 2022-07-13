@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application.name: Crewdeva
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8484/auth/realms/CrewdevaRealm/protocol/openid-connect/certs
+
+keycloak:
+  auth-server-url: http://localhost:8484/auth
+  realm: CrewdevaRealm
+  resource: my_client
+  public-client: true
+  bearer-only: true
