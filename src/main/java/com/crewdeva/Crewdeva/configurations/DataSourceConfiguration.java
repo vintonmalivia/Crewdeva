@@ -15,7 +15,7 @@ public class DataSourceConfiguration {
 
     private static abstract class DatabaseParams {
         private static final String DRIVER_CLASS_NAME = "org.postgresql.Driver";
-        private static final String URL = "jdbc:postgresql://localhost:5432/crewdeva";
+        private static final String URL = "jdbc:postgresql://localhost:5432/keycloak_db";
         private static final String POSTGRES_USERNAME = "postgres";
         private static final String POSTGRES_PASSWORD = "postgres";
     }
@@ -23,7 +23,7 @@ public class DataSourceConfiguration {
     private static abstract class HibernateProperties {
         private static final String AUTO_DDL_EXECUTION = "hibernate.hbm2ddl.auto";
         private static final String SHOW_DDL_LOG = "hibernate.show_sql";
-        private static final String DIALECT = "dialect";
+        private static final String DIALECT = "hibernate.dialect";
     }
 
     @Bean
